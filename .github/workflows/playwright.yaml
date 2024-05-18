@@ -1,8 +1,7 @@
 name: Playwright
 run-name: Linting on branch ${{github.ref_name}}
 on:
-  merge_group:
-    branches: [ main ]
+  pull_request:
 jobs:
   playwright:
     runs-on: ubuntu-latest
