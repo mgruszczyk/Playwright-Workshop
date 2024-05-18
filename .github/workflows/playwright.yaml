@@ -5,6 +5,8 @@ on:
 jobs:
   playwright:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - name: Checkout
       uses: actions/checkout@v4  
@@ -24,3 +26,9 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 1
+    - name: Deploy reports 
+      uses: peaceiris/actions-gh-pages@v4
+      with: 
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        public-branch: gh-pages
+        publish_dir: playwright-report
