@@ -2,6 +2,22 @@ name: Playwright
 run-name: Linting on branch ${{github.head_ref}}
 on:
   pull_request:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Environment
+        required: true
+        default: 'QA'
+        type: 'choice'
+        options:
+        - 'Staging'
+        - 'QA'
+      build:
+        description: Build
+        required: false
+        default: false
+        type: 'boolean'
+
 jobs:
   playwright:
     runs-on: ubuntu-latest
