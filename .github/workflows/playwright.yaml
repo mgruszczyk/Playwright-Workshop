@@ -7,23 +7,23 @@ on:
       environment:
         description: Environment
         required: true
-        default: "QA"
-        type: "choice"
+        default: 'QA'
+        type: 'choice'
         options:
-          - "Staging"
-          - "QA"
+          - 'Staging'
+          - 'QA'
       build:
         description: Build
         required: false
         default: false
-        type: "boolean"
+        type: 'boolean'
       browser:
         description: Choose a browser
         type: 'choice'
         options:
-        - 'chromium'
-        - 'firefox'
-        - 'webkit'
+          - 'chromium'
+          - 'firefox'
+          - 'webkit'
 
 jobs:
   playwright:
@@ -38,7 +38,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: '20'
       - name: Install dependencies
         run: npm ci
       - name: Install Playwright Browsers
@@ -57,5 +57,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: playwright-report
-      
-        
