@@ -9,11 +9,6 @@
     "pre-commit": "lint-staged",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{js, jsx,ts,tsx}": [
       "eslint --quiet --fix"
@@ -32,13 +27,10 @@
     "@typescript-eslint/parser": "^7.9.0",
     "eslint": "^8.57.0",
     "globals": "^15.2.0",
-    "husky": "^8.0.0",
+    "husky": "^4.3.8",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.9.0"
-  },
-  "dependencies": {
-    "husky": "^9.0.11"
   }
 }
