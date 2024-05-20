@@ -16,12 +16,8 @@
     }
   },
   "lint-staged": {
-    "*.{js, jsx,ts,tsx}": [
-      "eslint --fix"
-    ],
-    "*.{json,js,ts,jsx,tsx,html}": [
-      "prettier --write"
-    ]
+    "*.{js, jsx,ts,tsx}": []
+
   },
   "keywords": [],
   "author": "",
