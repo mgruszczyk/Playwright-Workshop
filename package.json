@@ -15,12 +15,6 @@
       "pre-push": "npm test"
     }
   },
-  "lint-staged": {
-    "*.ts": [
-      "npm run lint",
-      "npm run type-check"
-    ]
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
