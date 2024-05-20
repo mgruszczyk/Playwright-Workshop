@@ -9,6 +9,12 @@
     "pre-commit": "lint-staged",
     "prepare": "husky install"
   },
+  "husky": {
+    "hooks": {
+        "pre-commit": "lint-staged",
+        "pre-push": "npm test"
+    }
+},
   "lint-staged": {
     "*.{js, jsx,ts,tsx}": [
       "eslint --quiet --fix"
